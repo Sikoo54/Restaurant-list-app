@@ -1,0 +1,37 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: roboto;
+}
+
+#hero img {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  margin-top: 100px;
+  text-align: center;
+}
+
+button,
+a,
+input,
+textarea {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0%;
+  background-color: #bf172200;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}

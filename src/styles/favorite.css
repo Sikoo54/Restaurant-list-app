@@ -1,0 +1,142 @@
+/* Mengatur tampilan keseluruhan halaman favorit */
+#favorite-section {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+#favorite-section h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#favoriteContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#favoriteContainer ul {
+  list-style: none;
+  padding: 0;
+}
+
+#favoriteContainer li {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#favoriteContainer li h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+#favoriteContainer li img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+#favoriteContainer li p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+#favoriteContainer li a {
+  font-size: 1rem;
+  color: #1d72b8;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+#favoriteContainer li a:hover {
+  text-decoration: underline;
+}
+
+/*   ---------------------------------   remove-favorite button   ---------------------------------    */
+
+.remove-favorite {
+  background-color: #ff4747;
+  color: white;
+  border: none;
+  padding: 16px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-favorite:hover {
+  background-color: #d13f3f;
+}
+
+/*   ---------------------------------   details button   ---------------------------------    */
+
+a#details {
+  display: inline-block;
+  padding: 4px 20px; /* Memberikan padding yang cukup agar teks tidak bertabrakan dengan border */
+  font-size: 1.2rem;
+  line-height: 2.4; /* Menyesuaikan agar teks tidak meninggalkan ruang yang tidak perlu di bawahnya */
+  text-decoration: none !important;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #1d72b8;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+a#details:hover {
+  background-color: #1d72b8;
+  border-color: #155a8a;
+  color: white;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+a#details:active {
+  background-color: #155a8a;
+  border-color: #1c598f;
+  text-decoration: none;
+  transform: scale(0.98);
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 600px) {
+  #favoriteContainer {
+    gap: 15px;
+  }
+
+  #favoriteContainer li {
+    padding: 15px;
+  }
+
+  #favoriteContainer li h3 {
+    font-size: 1.2rem;
+  }
+
+  #favoriteContainer li p {
+    font-size: 0.9rem;
+  }
+
+  .remove-favorite {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

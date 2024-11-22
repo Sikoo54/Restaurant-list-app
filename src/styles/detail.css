@@ -1,0 +1,226 @@
+/* Detail Page Styles */
+#detail-section {
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+#detail-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#detailContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#detailContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+ul li strong {
+  font-weight: bold;
+}
+
+ul li span {
+  font-style: italic;
+  color: #888;
+}
+
+/* Style untuk Review Section */
+ul.customer-reviews li {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+ul.customer-reviews li:last-child {
+  border-bottom: none;
+}
+
+ul.customer-reviews li strong {
+  color: #333;
+}
+
+ul.customer-reviews li em {
+  color: #888;
+}
+
+/* button */
+#favoriteButton {
+  background-color: #43af47; /* Hijau untuk Add to Favorite */
+  color: white;
+  border: none;
+  padding: 16px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto;
+  margin-top: 40px;
+}
+
+#favoriteButton.remove-favorite {
+  background-color: #ff4747; /* Merah untuk Remove from Favorite */
+}
+
+#favoriteButton:hover {
+  background-color: #369639;
+}
+
+#favoriteButton.remove-favorite:hover {
+  background-color: #d12e2e;
+}
+
+/* Responsive Styling */
+
+@media (max-width: 480px) {
+  #detail-section {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  #detailContainer {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  ul li {
+    font-size: 0.8rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #detail-section {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #detailContainer {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  #detail-section {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  #detailContainer {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  ul li {
+    font-size: 1.1rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
