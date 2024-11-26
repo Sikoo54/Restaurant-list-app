@@ -1,16 +1,11 @@
-import UrlParser from '../../routes/url-parser'; // Sesuaikan dengan path yang benar
-import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb'; // Import dari file favorite-restaurant-idb.js
-
-const skipLinkElem = document.querySelector('.skip-link');
-skipLinkElem.addEventListener('click', (event) => {
-  event.preventDefault();
-  document.querySelector('#detail-section').focus();
-});
+import UrlParser from '../../routes/url-parser';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
 const Detail = {
   async render() {
     return `
       <section id="detail-section">
+      <a href="#mainContentDetail" class="skip-link">Menuju ke konten</a>
         <h1>Restaurant Details</h1>
         <div id="detailContainer"></div>
         <button id="favoriteButton">Add to Favorite</button>
@@ -75,24 +70,21 @@ const Detail = {
 
         const favoriteButton = document.getElementById('favoriteButton');
 
-        // Fungsi untuk memperbarui status tombol dan kelas CSS
         const updateFavoriteButton = async () => {
           const isFavorited = await FavoriteRestaurantIdb.getRestaurant(
             restaurant.id
           );
           if (isFavorited) {
             favoriteButton.textContent = 'Remove from Favorite';
-            favoriteButton.classList.add('remove-favorite'); // Tambahkan kelas remove-favorite
+            favoriteButton.classList.add('remove-favorite');
           } else {
             favoriteButton.textContent = 'Add to Favorite';
-            favoriteButton.classList.remove('remove-favorite'); // Hapus kelas remove-favorite
+            favoriteButton.classList.remove('remove-favorite');
           }
         };
 
-        // Perbarui status tombol saat pertama kali load
         await updateFavoriteButton();
 
-        // Event listener untuk tombol favorit
         favoriteButton.addEventListener('click', async () => {
           const isFavorited = await FavoriteRestaurantIdb.getRestaurant(
             restaurant.id
@@ -103,7 +95,6 @@ const Detail = {
             await FavoriteRestaurantIdb.putRestaurant(restaurant);
           }
 
-          // Perbarui status tombol setelah operasi tambah/hapus favorit
           await updateFavoriteButton();
         });
       } else {

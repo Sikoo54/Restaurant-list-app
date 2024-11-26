@@ -24,14 +24,45 @@ textarea {
 
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 0%;
-  background-color: #bf172200;
+  top: -80px;
+  left: 10px;
+  padding: 10px;
+  background-color: #007bff;
   color: white;
-  padding: 8px;
-  z-index: 100;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
 }
 
 .skip-link:focus {
-  top: 0;
+  top: 10px;
+  left: 10px;
+  background-color: #0056b3;
+}
+
+.skip-link:active,
+.skip-link:focus {
+  top: 10px;
+  left: 10px;
+  transition: top 0.3s ease-in-out;
+}
+
+/* Styling untuk indikator loading */
+.loading-indicator {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  display: none;
+  padding: 20px;
+}
+
+/* Styling untuk pesan error */
+.error-message {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  display: none;
+  padding: 20px;
 }
