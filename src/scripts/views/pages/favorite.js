@@ -27,8 +27,8 @@ const Favorite = {
     .map(
       (restaurant) => `
           <li>
-            <h3>${restaurant.name}</h3>
-            <img src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="Gambar dari ${restaurant.name}">
+            <h3 class="restaurant-name">${restaurant.name}</h3>
+            <img class="lazyload" data-src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="Gambar dari ${restaurant.name}">
             <p><strong>City:</strong> ${restaurant.city}</p>
             <p><strong>Address:</strong> ${restaurant.address}</p>
             <p><strong>Rating:</strong> ${restaurant.rating}</p>

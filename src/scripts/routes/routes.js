@@ -16,6 +16,14 @@ const router = async () => {
   const mainContent = document.getElementById('mainContent');
   mainContent.innerHTML = await page.render();
   if (page.afterRender) await page.afterRender();
+  const skipToContent = document.querySelector('.skip-link');
+  skipToContent.addEventListener('click', (e) => {
+    e.preventDefault();
+    mainContent.scrollIntoView({
+      behavior: 'smooth',
+    });
+    skipToContent.blur();
+  });
 };
 
 window.addEventListener('hashchange', router);

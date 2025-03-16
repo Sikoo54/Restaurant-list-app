@@ -2,12 +2,14 @@ const Home = {
   async render() {
     return `
       <section id="hero">
-      <a href="#mainContent" class="skip-link">Menuju ke konten</a>
-        <img
-          src="./images/heros/hero-image_2.jpg"
+       <picture>
+        <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
+        <img class="lazyload"
+          data-src="./images/heros/hero-image_2.jpg"
           width="450"
           alt="gambar-restoran"
         />
+        </picture>
       </section>
       <section id="restaurant-section">
         <h1>Restaurant List</h1>
@@ -46,7 +48,7 @@ const Home = {
           htmlContent += `
             <div id="restaurantContainer">
               <h2>${restaurant.name}</h2>
-              <img src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="Gambar dari ${restaurant.name}">
+              <img class="lazyload" data-src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="Gambar dari ${restaurant.name}">
               <p>City : ${restaurant.city}</p>
               <p>Rating : ${restaurant.rating}</p>
               <a id="details" href="#/detail/${restaurant.id}">Details</a>

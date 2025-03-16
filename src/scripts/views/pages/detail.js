@@ -4,11 +4,11 @@ import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 const Detail = {
   async render() {
     return `
-      <section id="detail-section">
-      <a href="#mainContentDetail" class="skip-link">Menuju ke konten</a>
+    <a href="#mainContentDetail" class="skip-link">Menuju ke konten</a>
+      <section id="detail-section">  
         <h1>Restaurant Details</h1>
         <div id="detailContainer"></div>
-        <button id="favoriteButton">Add to Favorite</button>
+       
       </section>
     `;
   },
@@ -33,13 +33,14 @@ const Detail = {
         container.innerHTML = `
         <a href="#mainContentDetail" class="skip-link">Menuju ke konten</a>
           <h2 id="mainContentDetail">${restaurant.name}</h2>
-          <img src="https://restaurant-api.dicoding.dev/images/large/${
+          <img class="lazyload" data-src="https://restaurant-api.dicoding.dev/images/large/${
   restaurant.pictureId
 }" alt="Gambar dari ${restaurant.name}">
           <p><strong>City:</strong> ${restaurant.city}</p>
           <p><strong>Address:</strong> ${restaurant.address}</p>
           <p><strong>Rating:</strong> ${restaurant.rating}</p>
           <p><strong>Description:</strong> ${restaurant.description}</p>
+           <button class="add-favorite" id="favoriteButton">Add to Favorite</button>
 
           <h3>Menu Makanan</h3>
           <ul>

@@ -17,6 +17,9 @@ const FavoriteRestaurantIdb = {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
   async putRestaurant(restaurant) {
+    if (!Object.prototype.hasOwnProperty.call(restaurant, 'id')) {
+      throw new Error('Restaurant must have an ID!');
+    }
     return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
   },
   async deleteRestaurant(id) {
